@@ -21,6 +21,11 @@ export function Settings({
     weight:               "",
     hasChronicDisease:    false,
     chronicDiseaseDetail: "",
+    // New ML fields
+    isPregnant:           false,
+    smokingStatus:        "",
+    alcoholUse:           false,
+    familyHistory:        "",
     emergencyContactName:  "",
     emergencyContactPhone: "",
   });
@@ -65,6 +70,11 @@ export function Settings({
           weight:               p.weight ?? "",
           hasChronicDisease:    p.hasChronicDisease ?? false,
           chronicDiseaseDetail: p.chronicDiseaseDetail || "",
+          // New ML fields
+          isPregnant:           p.isPregnant ?? false,
+          smokingStatus:        p.smokingStatus || "",
+          alcoholUse:           p.alcoholUse ?? false,
+          familyHistory:        p.familyHistory || "",
           emergencyContactName:  p.emergencyContact?.name  || "",
           emergencyContactPhone: p.emergencyContact?.phone || "",
         };
@@ -96,6 +106,11 @@ export function Settings({
         weight:               form.weight ? Number(form.weight) : null,
         hasChronicDisease:    form.hasChronicDisease,
         chronicDiseaseDetail: form.chronicDiseaseDetail || null,
+        // New ML fields
+        isPregnant:           form.isPregnant,
+        smokingStatus:        form.smokingStatus || null,
+        alcoholUse:           form.alcoholUse,
+        familyHistory:        form.familyHistory || null,
         emergencyContact: {
           name:  form.emergencyContactName  || null,
           phone: form.emergencyContactPhone || null,
@@ -325,6 +340,67 @@ export function Settings({
                   rows={2}
                   className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 text-sm resize-none" />
               )}
+            </div>
+
+            {/* ── ML Health Factors ── */}
+            <div className="mt-6 pt-4 border-t border-gray-100">
+              <p className="text-gray-500 text-xs font-medium uppercase tracking-wide mb-3">
+                Health Factors (improves AI predictions)
+              </p>
+
+              {/* Pregnancy — only for female */}
+              {(form.gender === "Female" || form.gender === "") && (
+                <div className="mb-3">
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input type="checkbox" name="isPregnant"
+                      checked={form.isPregnant} onChange={handleChange}
+                      className="w-4 h-4 accent-emerald-500" />
+                    <span className="text-gray-700 text-sm">
+                      Currently pregnant
+                      {form.gender === "" && (
+                        <span className="text-gray-400 text-xs ml-1">(shown for Female)</span>
+                      )}
+                    </span>
+                  </label>
+                </div>
+              )}
+
+              {/* Smoking status */}
+              <div className="mb-3">
+                <label className="block text-gray-700 text-sm font-medium mb-1">
+                  Smoking status
+                </label>
+                <select name="smokingStatus" value={form.smokingStatus} onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 text-sm">
+                  <option value="">Prefer not to say</option>
+                  <option value="never">Never smoked</option>
+                  <option value="former">Former smoker</option>
+                  <option value="current">Current smoker</option>
+                </select>
+              </div>
+
+              {/* Alcohol use */}
+              <div className="mb-3">
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" name="alcoholUse"
+                    checked={form.alcoholUse} onChange={handleChange}
+                    className="w-4 h-4 accent-emerald-500" />
+                  <span className="text-gray-700 text-sm">I consume alcohol regularly</span>
+                </label>
+              </div>
+
+              {/* Family history */}
+              <div>
+                <label className="block text-gray-700 text-sm font-medium mb-1">
+                  Family history of disease
+                </label>
+                <input name="familyHistory" value={form.familyHistory} onChange={handleChange}
+                  placeholder="e.g. Diabetes, Heart Disease, Cancer"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 text-sm" />
+                <p className="text-gray-400 text-xs mt-1">
+                  Separate conditions with commas
+                </p>
+              </div>
             </div>
           </div>
 
