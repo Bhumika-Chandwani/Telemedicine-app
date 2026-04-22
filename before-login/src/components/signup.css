@@ -1,0 +1,500 @@
+/* Signup.css */
+
+/* ==================== WRAPPER & CONTAINER ==================== */
+.signup-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fdf9 0%, #e0f9f1 50%, #d1fae5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.signup-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* ==================== HEADER ==================== */
+.signup-header {
+  background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+  padding: 32px 40px;
+  text-align: center;
+  color: white;
+}
+
+.signup-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.signup-header p {
+  font-size: 16px;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* ==================== PROGRESS BAR ==================== */
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 40px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  background: #d1d5db;
+  color: #6b7280;
+  transition: all 0.3s ease;
+}
+
+.step-circle.active {
+  background: #059669;
+  color: white;
+}
+
+.step-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.progress-line {
+  width: 100px;
+  height: 3px;
+  background: #d1d5db;
+  margin: 0 20px;
+  transition: all 0.3s ease;
+}
+
+.progress-line.active {
+  background: #059669;
+}
+
+/* ==================== ERROR MESSAGE ==================== */
+.error-message {
+  margin: 24px 40px 0;
+  padding: 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ==================== FORM ==================== */
+.signup-form {
+  padding: 32px 40px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==================== FORM GROUPS ==================== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-hint {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* ==================== SELECT DROPDOWN ==================== */
+.select-wrapper {
+  position: relative;
+}
+
+.form-select {
+  appearance: none;
+  background: white;
+  cursor: pointer;
+  padding-right: 40px;
+  font-weight: 500;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* ==================== FORM SECTIONS ==================== */
+.form-section {
+  padding: 24px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #059669;
+  margin: 0 0 8px 0;
+}
+
+.section-description {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 20px 0;
+}
+
+/* ==================== FORM ROW (2 columns) ==================== */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ==================== AVAILABILITY ==================== */
+.availability-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.availability-item {
+  background: white;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.day-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.day-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #059669;
+}
+
+.day-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #374151;
+}
+
+.time-inputs {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+  padding-left: 32px;
+}
+
+.time-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.time-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.time-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.time-input:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+.time-separator {
+  color: #9ca3af;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+/* ==================== BREAK TIME ==================== */
+.break-time-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+/* ==================== FILE UPLOADS ==================== */
+.form-file {
+  width: 100%;
+  padding: 12px;
+  border: 2px dashed #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.form-file:hover {
+  border-color: #059669;
+  background: #f0fdf4;
+}
+
+.form-file::file-selector-button {
+  padding: 8px 16px;
+  margin-right: 16px;
+  background: #d1fae5;
+  color: #047857;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-file::file-selector-button:hover {
+  background: #a7f3d0;
+}
+
+/* ==================== BUTTONS ==================== */
+.btn-primary {
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+}
+
+.btn-primary:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 14px 24px;
+  background: #f3f4f6;
+  color: #374151;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.button-group .btn-primary,
+.button-group .btn-secondary {
+  flex: 1;
+}
+
+/* ==================== PATIENT COMPLETE ==================== */
+.patient-complete {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.complete-icon {
+  width: 80px;
+  height: 80px;
+  background: #d1fae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 40px;
+  color: #059669;
+}
+
+.complete-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.complete-description {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0 0 24px 0;
+}
+
+/* ==================== FOOTER ==================== */
+.signup-footer {
+  padding: 20px 40px;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.signup-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.login-link {
+  color: #059669;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.login-link:hover {
+  color: #047857;
+  text-decoration: underline;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .signup-wrapper {
+    padding: 20px 16px;
+  }
+
+  .signup-header {
+    padding: 24px 24px;
+  }
+
+  .signup-header h1 {
+    font-size: 24px;
+  }
+
+  .signup-form {
+    padding: 24px 24px;
+  }
+
+  .form-section {
+    padding: 16px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-line {
+    width: 60px;
+    margin: 0 12px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .time-inputs {
+    flex-direction: column;
+    padding-left: 16px;
+  }
+
+  .break-time-wrapper {
+    flex-direction: column;
+  }
+
+  .time-separator {
+    display: none;
+  }
+}

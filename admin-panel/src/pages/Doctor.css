@@ -1,0 +1,167 @@
+/* SAME BASE STYLE AS USER */
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-dropdown {
+    padding: 10px 14px;
+    border: 1px solid var(--color-border-teal-light);
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+}
+
+/* TABLE */
+.table-container {
+    background: var(--color-bg-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--color-shadow-soft);
+    overflow: hidden;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border-very-light);
+}
+
+.data-table th {
+    background-color: var(--color-bg-main);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* HOVER */
+.data-table tbody tr:hover {
+    background-color: var(--color-mint-hover);
+}
+
+/* STATUS COLORS */
+.status {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status.approved {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status.pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status.disapproved {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* BUTTONS */
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.btn.view {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.btn.approve {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.btn.reject {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.btn.delete {
+    background-color: #fecaca;
+    color: #7f1d1d;
+}
+
+/* NO DATA */
+.no-data {
+    text-align: center;
+    padding: 2rem;
+    color: gray;
+}
+/* MODAL */
+/* FULL SCREEN OVERLAY */
+.modal-overlay {
+    position: fixed;   /* ✅ VERY IMPORTANT */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;     /* ✅ center align */
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;     /* ✅ bring on top */
+}
+
+/* MODAL BOX */
+.modal {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    animation: popup 0.25s ease;
+}
+
+/* ANIMATION */
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.preview-img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+}

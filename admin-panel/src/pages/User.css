@@ -1,0 +1,108 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: cardEntry 0.5s ease-out;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px 16px;
+    border: 1px solid var(--color-border-teal-light);
+    border-radius: 8px;
+    width: 300px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-bar input:focus {
+    border-color: var(--color-primary-teal);
+    box-shadow: 0 0 0 3px var(--color-mint-bg);
+}
+
+.table-container {
+    background: var(--color-bg-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--color-shadow-soft);
+    overflow: hidden;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border-very-light);
+}
+
+.data-table th {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.data-table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.data-table tbody tr:hover {
+    background-color: var(--color-mint-hover);
+}
+
+.data-table td {
+    color: var(--color-text-primary);
+    font-size: 0.95rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 1rem;
+    background-color: var(--color-bg-white);
+}
+
+.page-btn {
+    padding: 8px 12px;
+    border: 1px solid var(--color-border-very-light);
+    background-color: var(--color-bg-white);
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    transition: all 0.2s;
+}
+
+.page-btn:hover:not(:disabled) {
+    background-color: var(--color-bg-main);
+}
+
+.page-btn.active {
+    background-color: var(--color-primary-teal);
+    color: var(--color-bg-white);
+    border-color: var(--color-primary-teal);
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.no-data {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-style: italic;
+    padding: 2rem !important;
+}

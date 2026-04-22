@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.karla-font {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes rotateSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-rotate-slow {
+  animation: rotateSlow 12s linear infinite;
+}
+
+.animate-rotate-reverse {
+  animation: rotateReverse 18s linear infinite;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.4);
+}

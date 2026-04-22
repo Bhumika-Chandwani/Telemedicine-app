@@ -1,0 +1,308 @@
+:root {
+  --tm-teal: #14b8a6;         /* matches the TeleMed logo/buttons */
+  --tm-teal-soft: #e0f7f4;
+  --tm-bg: #f9fafb;
+  --tm-dark: #111827;
+  --tm-muted: #6b7280;
+  --tm-border: #e5e7eb;
+  --tm-radius-lg: 24px;
+  --tm-radius-md: 14px;
+  --tm-shadow-soft: 0 24px 60px rgba(15, 23, 42, 0.08);
+  --tm-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* Page wrapper */
+.tm-contact-page {
+  padding: 96px 7vw 120px;
+  background: #ffffff;
+  font-family: var(--tm-font-sans);
+  color: var(--tm-dark);
+}
+
+/* Hero section */
+.tm-contact-hero {
+  max-width: 780px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.tm-contact-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: var(--tm-teal-soft);
+  color: var(--tm-teal);
+}
+
+.tm-contact-title {
+  margin-top: 18px;
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.tm-contact-subtitle {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--tm-muted);
+}
+
+/* Layout */
+.tm-contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* Left side info */
+.tm-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.tm-contact-block {
+  background: #ffffff;
+  border-radius: var(--tm-radius-lg);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  padding: 24px 26px;
+}
+
+.tm-contact-block-inline {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.tm-block-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.tm-block-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tm-block-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--tm-muted);
+}
+
+.tm-block-caption {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* Contact details */
+.tm-contact-details {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tm-contact-detail-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.tm-contact-label {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin-bottom: 2px;
+}
+
+.tm-contact-value {
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--tm-dark);
+}
+
+.tm-contact-value:hover {
+  color: var(--tm-teal);
+}
+
+/* Chips */
+.tm-contact-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.tm-chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--tm-border);
+  font-size: 12px;
+  color: #374151;
+  background: #f9fafb;
+}
+
+/* Right side form */
+.tm-contact-form-card {
+  background: #ffffff;
+  border-radius: var(--tm-radius-lg);
+  box-shadow: var(--tm-shadow-soft);
+  padding: 28px 28px 30px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.tm-form-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tm-form-subtitle {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--tm-muted);
+}
+
+/* Form */
+.tm-contact-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tm-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.tm-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tm-form-field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.tm-form-field input,
+.tm-form-field textarea {
+  border-radius: 12px;
+  border: 1px solid var(--tm-border);
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: var(--tm-font-sans);
+  outline: none;
+  transition: border 0.15s ease, box-shadow 0.15s ease;
+  background: #f9fafb;
+}
+
+.tm-form-field input::placeholder,
+.tm-form-field textarea::placeholder {
+  color: #9ca3af;
+}
+
+.tm-form-field input:focus,
+.tm-form-field textarea:focus {
+  border-color: var(--tm-teal);
+  box-shadow: 0 0 0 1px var(--tm-teal-soft);
+  background: #ffffff;
+}
+
+/* Footer row */
+.tm-form-footer {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tm-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--tm-muted);
+}
+
+.tm-checkbox input {
+  margin-top: 2px;
+}
+
+/* Primary button */
+.tm-primary-button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--tm-teal);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(20, 184, 166, 0.28);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.tm-primary-button:hover {
+  background: #0f9f93;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 40px rgba(20, 184, 166, 0.32);
+}
+
+.tm-primary-button:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 24px rgba(20, 184, 166, 0.24);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .tm-contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tm-contact-page {
+    padding-top: 72px;
+  }
+
+  .tm-contact-form-card {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .tm-contact-page {
+    padding: 72px 20px 80px;
+  }
+
+  .tm-contact-title {
+    font-size: 32px;
+  }
+
+  .tm-contact-block-inline,
+  .tm-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tm-contact-form-card {
+    padding: 22px 20px 24px;
+  }
+}

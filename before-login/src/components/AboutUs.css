@@ -1,0 +1,230 @@
+/* Page background to match light area between TeleMed header and dark footer */
+.about-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #111827;
+}
+
+/* Colors to match TeleMed theme from header/footer */
+:root {
+  --telemed-primary: #00bfa6; /* teal similar to logo/buttons */
+  --telemed-primary-soft: #e6fffa;
+  --telemed-dark: #050816;
+  --telemed-muted: #6b7280;
+  --telemed-border: #e5e7eb;
+}
+
+/* Hero */
+
+.about-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.about-hero-text h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.about-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--telemed-primary);
+  margin-bottom: 0.75rem;
+}
+
+.about-subtitle {
+  font-size: 1.05rem;
+  color: var(--telemed-muted);
+  margin-bottom: 1rem;
+}
+
+.about-body {
+  font-size: 0.98rem;
+  color: #111827;
+}
+
+.about-hero-image-wrapper {
+  flex: 0 0 40%;
+  max-width: 420px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+}
+
+.about-hero-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Generic sections */
+
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.about-section-alt {
+  flex-direction: row-reverse;
+}
+
+.about-section-content {
+  flex: 1;
+}
+
+.about-section-content h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.about-section-content p {
+  font-size: 0.98rem;
+  color: #111827;
+  line-height: 1.6;
+}
+
+.about-section-image {
+  flex: 1;
+}
+
+.about-section-image img {
+  width: 100%;
+  border-radius: 1.25rem;
+  object-fit: cover;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.16);
+}
+
+/* Lists */
+
+.about-list {
+  margin: 1.25rem 0 1.25rem;
+  padding-left: 1.25rem;
+  font-size: 0.97rem;
+  color: #111827;
+}
+
+.about-list li {
+  margin-bottom: 0.4rem;
+}
+
+/* Why choose us */
+
+.about-why {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-why h2 {
+  margin-bottom: 0.5rem;
+}
+
+.about-body.center {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 1.75rem;
+}
+
+.about-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.about-card {
+  border-radius: 1rem;
+  border: 1px solid var(--telemed-border);
+  padding: 1.25rem 1.3rem;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease, background 0.15s ease;
+}
+
+.about-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.about-card p {
+  font-size: 0.9rem;
+  color: var(--telemed-muted);
+}
+
+.about-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.14);
+  border-color: var(--telemed-primary-soft);
+  background: var(--telemed-primary-soft);
+}
+
+/* Vision */
+
+.about-vision {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  border-radius: 1.5rem;
+  background: #050816;
+  color: #f9fafb;
+}
+
+.about-vision h2 {
+  margin-bottom: 0.8rem;
+}
+
+.about-vision p {
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .about-hero,
+  .about-section,
+  .about-section-alt {
+    flex-direction: column;
+  }
+
+  .about-section-image,
+  .about-hero-image-wrapper {
+    max-width: 100%;
+  }
+
+  .about-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .about-page {
+    padding: 2.5rem 1.2rem 3rem;
+  }
+
+  .about-hero-text h1 {
+    font-size: 2.1rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-vision {
+    padding: 2rem 1.4rem;
+  }
+}

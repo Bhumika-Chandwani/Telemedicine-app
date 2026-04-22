@@ -1,0 +1,150 @@
+/* Page background */
+.tm-auth-wrapper {
+  min-height: 100vh;
+  background: #e9fff6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card */
+.tm-auth-card {
+  width: 420px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header */
+.tm-auth-header {
+  background: #009a63;
+  color: #fff;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.tm-auth-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.tm-auth-header p {
+  margin-top: 6px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* Steps */
+.tm-auth-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.step span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.step.active {
+  color: #009a63;
+}
+
+.step.active span {
+  background: #009a63;
+  color: #fff;
+  border-color: #009a63;
+}
+
+.line {
+  width: 60px;
+  height: 2px;
+  background: #ddd;
+  margin: 0 10px;
+}
+
+/* Form */
+.tm-auth-form {
+  padding: 0 30px 25px;
+}
+
+.tm-form-group {
+  margin-bottom: 15px;
+}
+
+.tm-form-group label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.tm-form-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Error */
+.tm-error {
+  background: #ffe6e6;
+  color: #c62828;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Button */
+.tm-primary-btn {
+  width: 100%;
+  padding: 12px;
+  background: #009a63;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.tm-primary-btn:hover {
+  background: #007f52;
+}
+
+.tm-primary-btn:disabled {
+  background: #9fd6c1;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.tm-auth-footer {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 13px;
+}
+
+.tm-auth-footer span {
+  color: #009a63;
+  cursor: pointer;
+  font-weight: 500;
+}
